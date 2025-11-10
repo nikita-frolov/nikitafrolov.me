@@ -1,0 +1,78 @@
+:root {
+  font-family: "Geist Sans", "Geist", "Segoe UI", system-ui, -apple-system,
+    sans-serif;
+  color: #101828;
+}
+
+@media (min-width: 648px) { 
+  body {
+    max-width: 822px; 
+    margin: 0 auto; 
+  } 
+}
+
+main {
+  margin-top: 97px;
+}
+
+section {
+  margin-bottom: 21px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+}
+
+.experience-list {
+  max-width: 648px;
+  margin: 0 left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  grid-template-columns: auto 1fr;
+  border: 1px solid #E5E5E5;
+  border-radius: 12px;
+}
+
+.experience-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.experience-card__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.experience-card__company {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.experience-card__dates {
+  margin: 0;
+  font-family: "Geist Mono", "Fira Mono", monospace;
+  color: #808080;
+}
+
+.experience-card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
