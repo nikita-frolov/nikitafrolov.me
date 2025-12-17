@@ -109,7 +109,7 @@ body {
 .panel {
   border-left: 1px solid var(--black-90);
   border-right: 1px solid var(--black-90);
-  border-bottom: 1px solid var(--black-90);
+  /* border-bottom: 1px solid var(--black-90); */
   background: transparent;
   margin: 0 0 /*var(--s-16)*/;
 }
@@ -132,7 +132,10 @@ body {
 /* About */
 .about__title { margin-bottom: var(--s-21); }
 .about__text { max-width: 60ch; }
-.about__panel-body { padding: var(--s-16); }
+.about__panel-body { 
+  padding: var(--s-16); 
+  border-bottom: 1px solid var(--black-90);
+}
 
 /* Cards inside panels */
 .card {
@@ -164,7 +167,7 @@ body {
 }
 .tag {
   border: 1px solid var(--black-90);
-  border-radius: 999px;
+  border-radius: 0;
   padding: 4px 8px;
   background: transparent;
   display: inline-flex;
@@ -198,7 +201,7 @@ body {
   width: 36px;
   height: 36px;
   border: 1px solid var(--black-90);
-  border-radius: 999px;
+  border-radius: 0px;
   background: transparent;
   cursor: pointer;
   display: inline-flex;
@@ -219,17 +222,24 @@ body {
 [hidden] { display: none !important; }
 
 /* Contacts */
+.contacts__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .contacts__list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s-8);
+  /* gap: var(--s-8); */
 }
 .contact-btn {
-  border: 1px solid var(--black-90);
-  border-radius: 999px;
+  border-right: 1px solid var(--black-90);
+  border-radius: 0px;
   background: transparent;
   color: var(--black-100);
   padding: 8px 16px;
@@ -257,7 +267,7 @@ body {
 
 .menu__btn {
   border: 1px solid var(--black-90);
-  border-radius: 999px;
+  border-radius: 0px;
   background: transparent;
   color: var(--black-100);
   padding: 8px 16px;
@@ -289,7 +299,7 @@ body {
     gap: 6px;
     align-items: center;
     border: 1px solid var(--black-90);
-    border-radius: 999px;
+    border-radius: 0px;
     background: transparent;
     padding: 8px 12px;
     cursor: pointer;
