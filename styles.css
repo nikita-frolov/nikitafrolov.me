@@ -3,6 +3,7 @@
   --black-100: #101828;
   --black-90: #282f3e;
   --black-50: #808080;
+  --accent-100: #025997;
 }
 
 * {
@@ -296,13 +297,120 @@ body {
   cursor: pointer;
 }
 
+.selector--hero {
+  justify-content: space-between;
+  padding: 8px;
+}
+
 .selector--hero button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  width: 20px;
+  height: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  padding: 0;
+  color: var(--black-90);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.selector--hero button:hover,
+.selector--hero button:focus-visible {
+  color: var(--accent-100);
+}
+
+.arrow-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+.arrow-icon--left {
+  background-image: url("assets/16_Chevron_Left.svg");
+  -webkit-mask: url("assets/16_Chevron_Left.svg") center / contain no-repeat;
+  mask: url("assets/16_Chevron_Left.svg") center / contain no-repeat;
+}
+
+.arrow-icon--right {
+  background-image: url("assets/16_Chevron_Right.svg");
+  -webkit-mask: url("assets/16_Chevron_Right.svg") center / contain no-repeat;
+  mask: url("assets/16_Chevron_Right.svg") center / contain no-repeat;
+}
+
+.project-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-gallery__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-gallery--hero .project-gallery__viewport {
+  aspect-ratio: 16 / 9;
+  background: var(--bg);
+}
+
+.project-gallery__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.project-gallery__slide {
+  margin: 0;
+  width: 100%;
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.project-gallery__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-gallery__slide--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+.project-gallery__slide--placeholder img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.project-gallery--hero .selector {
+  background: var(--bg);
+  border-top-color: var(--black-90);
+}
+
+.project-gallery--hero .dots {
+  align-items: center;
+}
+
+.project-gallery--hero .dots i {
+  width: 6px;
+  height: 6px;
+  border: 0;
+  background: url("assets/Other.svg") center / 6px 6px no-repeat;
+}
+
+.project-gallery--hero .dots i.active {
+  width: 10px;
+  height: 10px;
+  background: url("assets/Current.svg") center / 10px 10px no-repeat;
 }
 
 .dots {

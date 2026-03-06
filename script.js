@@ -95,3 +95,85 @@
     });
   }
 })();
+
+(function () {
+  const galleries = Array.from(document.querySelectorAll("[data-gallery]"));
+  if (galleries.length === 0) return;
+
+  galleries.forEach((gallery) => {
+    const track = gallery.querySelector(".project-gallery__track");
+    const dotsWrap = gallery.querySelector("[data-gallery-dots]");
+    const prevBtn = gallery.querySelector("[data-gallery-prev]");
+    const nextBtn = gallery.querySelector("[data-gallery-next]");
+    if (!track || !dotsWrap) return;
+
+    const imagesRaw = gallery.getAttribute("data-images") || "";
+    const images = imagesRaw
+      .split("|")
+      .map((item) => item.trim())
+      .filter(Boolean);
+    const alt = gallery.getAttribute("data-alt") || "Gallery image";
+    if (images.length === 0) return;
+
+    track.innerHTML = "";
+    dotsWrap.innerHTML = "";
+
+    images.forEach((src, index) => {
+      const slide = document.createElement("figure");
+      slide.className = "project-gallery__slide";
+      const isPlaceholder = /image[_ ]placeholder\.svg$/i.test(src);
+      if (isPlaceholder) {
+        slide.classList.add("project-gallery__slide--placeholder");
+      }
+
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = alt + " " + (index + 1);
+      img.loading = index === 0 ? "eager" : "lazy";
+      img.width = 720;
+      img.height = 405;
+
+      slide.appendChild(img);
+      track.appendChild(slide);
+
+      const dot = document.createElement("i");
+      if (index === 0) dot.classList.add("active");
+      dot.setAttribute("aria-hidden", "true");
+      dotsWrap.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsWrap.querySelectorAll("i"));
+    let currentIndex = 0;
+
+    function render() {
+      track.style.transform = `translateX(${-currentIndex * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentIndex);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        render();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        render();
+      });
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        currentIndex = i;
+        render();
+      });
+      dot.style.cursor = "pointer";
+    });
+
+    render();
+  });
+})();
