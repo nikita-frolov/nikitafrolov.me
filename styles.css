@@ -436,10 +436,6 @@ body {
   gap: 8px;
 }
 
-.job-card--compact {
-  min-height: 104px;
-}
-
 .job-head {
   display: grid;
   grid-template-columns: 20px 1fr auto;
@@ -447,11 +443,54 @@ body {
   gap: 2px;
 }
 
-.chev {
-  color: var(--black-90);
-  font-size: 16px;
-  line-height: 1;
-  margin-top: 1px;
+.job-toggle {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent;
+  padding: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.job-toggle__icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.15s ease;
+}
+
+.job-toggle[aria-expanded="false"] .job-toggle__icon {
+  transform: rotate(-90deg);
+}
+
+.job-company {
+  padding-left: 22px;
+}
+
+.job-company a {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--black-100);
+  text-decoration: none;
+}
+
+.job-company a:hover {
+  text-decoration: underline;
+}
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.job-paragraph {
+  margin: 0;
+  padding-left: 22px;
 }
 
 .job-list {
@@ -464,6 +503,22 @@ body {
 
 .job-list li + li {
   margin-top: 4px;
+}
+
+.job-list--links li + li {
+  margin-top: 2px;
+}
+
+.job-list--links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--black-100);
+  text-decoration: none;
+}
+
+.job-list--links a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 1100px) {

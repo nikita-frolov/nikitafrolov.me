@@ -97,6 +97,33 @@
 })();
 
 (function () {
+  const jobCards = Array.from(document.querySelectorAll("[data-job-card]"));
+  if (jobCards.length === 0) return;
+
+  function setJobCard(card, open) {
+    const button = card.querySelector(".job-toggle");
+    const details = card.querySelector(".job-details");
+    if (!button || !details) return;
+    button.setAttribute("aria-expanded", open ? "true" : "false");
+    details.hidden = !open;
+  }
+
+  jobCards.forEach((card) => {
+    const button = card.querySelector(".job-toggle");
+    const details = card.querySelector(".job-details");
+    if (!button || !details) return;
+
+    const open = button.getAttribute("aria-expanded") === "true";
+    details.hidden = !open;
+
+    button.addEventListener("click", () => {
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+      setJobCard(card, !isOpen);
+    });
+  });
+})();
+
+(function () {
   const galleries = Array.from(document.querySelectorAll("[data-gallery]"));
   if (galleries.length === 0) return;
 

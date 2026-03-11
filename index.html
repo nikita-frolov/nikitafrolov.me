@@ -8,6 +8,8 @@
 </head>
 <body>
   <main class="layout" aria-label="Портфолио">
+    
+    <!-- О себе -->
     <section class="row row--about row--line">
       <div class="left icon-cell">
         <img src="assets/24_Fire_Camp.svg" alt="О себе" width="24" height="24" />
@@ -22,7 +24,8 @@
       </div>
       <div class="right" aria-hidden="true"></div>
     </section>
-
+    
+    <!-- Проекты -->
     <section class="row row--title row--line">
       <div class="left icon-cell">
         <img src="assets/24_Folder_Open.svg" alt="Проекты" width="24" height="24" />
@@ -31,9 +34,10 @@
       <div class="right" aria-hidden="true"></div>
     </section>
 
-    <section class="row row--line">
+    <!-- Система инвестиционного планирования -->
+    <section class="row">
       <div class="left"></div>
-      <div class="center frame">
+      <div class="center frame row--line">
         <article class="project project--170 project--hero">
           <div class="project__info">
             <div class="project__head">
@@ -50,7 +54,7 @@
           <p class="body16 project__desc">Запуск и работа над внутреннним корпоративным продуктом для финансового планирования и анализа проектов компании</p>
           <div class="project__bottom">
             <ul class="tags" aria-label="Теги"><li>WEB</li><li>B2B</li></ul>
-            <a href="#" class="action">Подробнее <span aria-hidden="true">→</span></a>
+            <a href="#" class="action">Подробнее<img src="assets/16_Arrow_Right.svg" alt="" width="16" height="16"/></a>
           </div>
         </article>
 
@@ -72,9 +76,10 @@
       <div class="right"></div>
     </section>
 
-    <section class="row row--line">
+    <!-- Дизайн-система РТК ИТ -->
+    <section class="row">
       <div class="left"></div>
-      <div class="center frame">
+      <div class="center frame row--line">
         <article class="project project--170 project--hero">
           <div class="project__info">
             <div class="project__head">
@@ -95,152 +100,452 @@
         </article>
     </div>
     <div class="right"></div>
-  </section>
+    </section>
 
-    <section class="row row--line"><div class="left"></div><div class="center frame">
-      <article class="project project--170">
-        <div class="project__head"><div class="project__title-wrap"><h3 class="h2">Платформа клиентского обслуживания</h3><span class="icon-up">↗</span></div><p class="mono16">2020 – 2022</p></div>
-        <p class="text14">Финтех</p>
-        <p class="body16">Единый интерфейс для операционных команд с фокусом на скорость обработки обращений.</p>
-        <div class="project__bottom"><ul class="tags"><li>CRM</li><li>UI</li></ul><a href="#" class="action">Action <span>→</span></a></div>
+    <!-- CRM B2O -->
+    <section class="row">
+    <div class="left"></div>
+    <div class="center frame row--line">
+      <article class="project project--170 project--hero">
+        <div class="project__info">
+          <div class="project__head">
+            <div class="project__title-wrap">
+              <h3 class="h2">CRM B2O</h3>
+              <a class="link-ext" href="https://rtkit.ru/products/crmb20" target="_blank" rel="noopener noreferrer" aria-label="Открыть проект в новой вкладке">
+                <img src="assets/24_Arrow_Up_Right.svg" alt="" width="20" height="20" />
+              </a>
+            </div>
+            <p class="mono16">2023</p>
+          </div>
+          <p class="text14 project__company">Ростелеком ИТ</p>
+        </div>
+        <p class="body16 project__desc">Система управления взаимоотношениями с клиентами сегмента B2O, разработанная для автоматизации бизнес-процессов и повышения эффективности продаж.</p>
+        <div class="project__bottom">
+          <ul class="tags" aria-label="Теги"><li>WEB</li><li>B2O</li></ul>
+          <a href="#" class="action">Подробнее<img src="assets/16_Arrow_Right.svg" alt="" width="16" height="16"/></a>
+        </div>
       </article>
-      <div class="placeholder"><img src="https://www.figma.com/api/mcp/asset/f67ab801-4bce-42bf-ba99-ec8a9a23e4c8" alt="Плейсхолдер" width="90" height="90" /></div>
-      <nav class="selector" aria-label="Навигация по слайдам"><button type="button">‹</button><span class="dots"><i></i><i class="active"></i><i></i></span><button type="button">›</button></nav>
-    </div><div class="right"></div></section>
 
-    <section class="row row--line"><div class="left"></div><div class="center frame">
-      <article class="project project--212">
-        <div class="project__head"><div class="project__title-wrap"><h3 class="h2">Сервис операционной аналитики</h3><span class="icon-up">↗</span></div><p class="mono16">2020</p></div>
-        <p class="text14">NDA</p>
-        <p class="body16">Разработка сценариев мониторинга и принятия решений для команд сопровождения.</p>
-        <div class="project__bottom"><ul class="tags"><li>ANALYTICS</li><li>DASHBOARD</li></ul><a href="#" class="action">Action <span>→</span></a></div>
+      <div class="project-gallery project-gallery--hero" data-gallery data-images="assets/Image_Placeholder.svg|assets/Image_Placeholder.svg|assets/Image_Placeholder.svg" data-alt="Скриншот проекта">
+        <div class="project-gallery__viewport">
+          <div class="project-gallery__track"></div>
+        </div>
+        <nav class="selector selector--hero" aria-label="Навигация по слайдам">
+          <button type="button" data-gallery-prev aria-label="Предыдущий">
+            <span class="arrow-icon arrow-icon--left" aria-hidden="true"></span>
+          </button>
+          <span class="dots" data-gallery-dots></span>
+          <button type="button" data-gallery-next aria-label="Следующий">
+            <span class="arrow-icon arrow-icon--right" aria-hidden="true"></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+    <div class="right"></div>
+    </section>
+
+    <!-- МегаФон Контроль Кадров -->
+    <section class="row">
+    <div class="left"></div>
+    <div class="center frame row--line">
+      <article class="project project--170 project--hero">
+        <div class="project__info">
+          <div class="project__head">
+            <div class="project__title-wrap">
+              <h3 class="h2">МегаФон Контроль Кадров</h3>
+              <a class="link-ext" href="https://kk.megafon.ru/new/landing" target="_blank" rel="noopener noreferrer" aria-label="Открыть проект в новой вкладке">
+                <img src="assets/24_Arrow_Up_Right.svg" alt="" width="20" height="20" />
+              </a>
+            </div>
+            <p class="mono16">2021</p>
+          </div>
+          <p class="text14 project__company">FunBox</p>
+        </div>
+        <p class="body16 project__desc">B2B-продукт для компаний с выездным персоналом (курьеры, перевозчики, полевые сотрудники). Система объединяет несколько сервисов: управление задачами, отслеживание перемещений сотрудников, формирование отчётов, интерфейсы коммуникации и аналитики маршрутов..</p>
+        <div class="project__bottom">
+          <ul class="tags" aria-label="Теги"><li>WEB</li><li>B2B</li></ul>
+          <a href="#" class="action">Подробнее<img src="assets/16_Arrow_Right.svg" alt="" width="16" height="16"/></a>
+        </div>
       </article>
-      <div class="placeholder"><img src="https://www.figma.com/api/mcp/asset/f67ab801-4bce-42bf-ba99-ec8a9a23e4c8" alt="Плейсхолдер" width="90" height="90" /></div>
-      <nav class="selector" aria-label="Навигация по слайдам"><button type="button">‹</button><span class="dots"><i></i><i></i><i class="active"></i></span><button type="button">›</button></nav>
-    </div><div class="right"></div></section>
 
-    <section class="row row--line"><div class="left"></div><div class="center frame">
-      <article class="project project--212">
-        <div class="project__head"><div class="project__title-wrap"><h3 class="h2">Инструменты продуктовых экспериментов</h3><span class="icon-up">↗</span></div><p class="mono16">2019 – 2020</p></div>
-        <p class="text14">Телеком</p>
-        <p class="body16">Интерфейсы для постановки A/B-тестов и анализа результатов по сегментам пользователей.</p>
-        <div class="project__bottom"><ul class="tags"><li>UX</li><li>AB TEST</li></ul><a href="#" class="action">Action <span>→</span></a></div>
+      <div class="project-gallery project-gallery--hero" data-gallery data-images="assets/Image_Placeholder.svg|assets/Image_Placeholder.svg|assets/Image_Placeholder.svg" data-alt="Скриншот проекта">
+        <div class="project-gallery__viewport">
+          <div class="project-gallery__track"></div>
+        </div>
+        <nav class="selector selector--hero" aria-label="Навигация по слайдам">
+          <button type="button" data-gallery-prev aria-label="Предыдущий">
+            <span class="arrow-icon arrow-icon--left" aria-hidden="true"></span>
+          </button>
+          <span class="dots" data-gallery-dots></span>
+          <button type="button" data-gallery-next aria-label="Следующий">
+            <span class="arrow-icon arrow-icon--right" aria-hidden="true"></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+    <div class="right"></div>
+    </section>
+
+    <!-- Шрифт kakbudto -->
+    <section class="row">
+    <div class="left"></div>
+    <div class="center frame row--line">
+      <article class="project project--170 project--hero">
+        <div class="project__info">
+          <div class="project__head">
+            <div class="project__title-wrap">
+              <h3 class="h2">Шрифт kakbudto</h3>
+              <a class="link-ext" href="https://fonts.kiosk.works" target="_blank" rel="noopener noreferrer" aria-label="Открыть проект в новой вкладке">
+                <img src="assets/24_Arrow_Up_Right.svg" alt="" width="20" height="20" />
+              </a>
+            </div>
+            <p class="mono16">2021</p>
+          </div>
+          <p class="text14 project__company">Designworkout®</p>
+        </div>
+        <p class="body16 project__desc">Опубликовал свой первый шрифт. Это экспериментальный шрифт с поддержкой латиницы и кириллицы, включая оба регистра.</p>
+        <p class="body16 project__desc">Проект был начат в рамках специального курса по дизайну шрифтов от Designworkout®.</p>
+        <div class="project__bottom">
+          <ul class="tags" aria-label="Теги"><li>WEB</li></ul>
+        </div>
       </article>
-      <div class="placeholder"><img src="https://www.figma.com/api/mcp/asset/f67ab801-4bce-42bf-ba99-ec8a9a23e4c8" alt="Плейсхолдер" width="90" height="90" /></div>
-      <nav class="selector" aria-label="Навигация по слайдам"><button type="button">‹</button><span class="dots"><i class="active"></i><i></i><i></i></span><button type="button">›</button></nav>
-    </div><div class="right"></div></section>
 
-    <section class="row row--line"><div class="left"></div><div class="center frame">
-      <article class="project project--149">
-        <div class="project__head"><div class="project__title-wrap"><h3 class="h2">Интерфейс проектного офиса</h3></div><p class="mono16">2019</p></div>
-        <p class="text14">B2B-платформа</p>
-        <p class="body16">Сценарии планирования, согласования и контроля статусов проектов.</p>
+      <div class="project-gallery project-gallery--hero" data-gallery data-images="assets/Image_Placeholder.svg|assets/Image_Placeholder.svg|assets/Image_Placeholder.svg" data-alt="Скриншот проекта">
+        <div class="project-gallery__viewport">
+          <div class="project-gallery__track"></div>
+        </div>
+        <nav class="selector selector--hero" aria-label="Навигация по слайдам">
+          <button type="button" data-gallery-prev aria-label="Предыдущий">
+            <span class="arrow-icon arrow-icon--left" aria-hidden="true"></span>
+          </button>
+          <span class="dots" data-gallery-dots></span>
+          <button type="button" data-gallery-next aria-label="Следующий">
+            <span class="arrow-icon arrow-icon--right" aria-hidden="true"></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+    <div class="right"></div>
+    </section>
+  
+    <!-- Минцифры Коронаконтроль -->
+    <section class="row">
+    <div class="left"></div>
+    <div class="center frame row--line">
+      <article class="project project--170 project--hero">
+        <div class="project__info">
+          <div class="project__head">
+            <div class="project__title-wrap">
+              <h3 class="h2">Минцифры Коронаконтроль</h3>
+            </div>
+            <p class="mono16">2020</p>
+          </div>
+          <p class="text14 project__company">FunBox</p>
+        </div>
+        <p class="body16 project__desc">Анализ карантинной обстановки в регионах.</p>
+        <div class="project__bottom">
+          <ul class="tags" aria-label="Теги"><li>WEB</li><li>B2G</li></ul>
+          <a href="#" class="action">Подробнее<img src="assets/16_Arrow_Right.svg" alt="" width="16" height="16"/></a>
+        </div>
       </article>
-      <div class="placeholder"><img src="https://www.figma.com/api/mcp/asset/f67ab801-4bce-42bf-ba99-ec8a9a23e4c8" alt="Плейсхолдер" width="90" height="90" /></div>
-      <nav class="selector" aria-label="Навигация по слайдам"><button type="button">‹</button><span class="dots"><i></i><i class="active"></i><i></i></span><button type="button">›</button></nav>
-    </div><div class="right"></div></section>
 
-    <section class="row row--line"><div class="left"></div><div class="center frame">
-      <article class="project project--338">
-        <div class="project__head"><div class="project__title-wrap"><h3 class="h2">Продуктовая аналитика и UX-исследования в B2B</h3><span class="icon-up">↗</span></div><p class="mono16">2018 – 2019</p></div>
-        <p class="text14">Консалтинг</p>
-        <p class="body16">Комплексный аудит сложных интерфейсов, исследование сценариев и проектирование новых пользовательских потоков.</p>
-        <p class="body16">Формирование и приоритизация бэклога улучшений, синхронизация с бизнес-целями и метриками.</p>
-        <div class="project__bottom"><ul class="tags"><li>RESEARCH</li><li>UX</li><li>B2B</li></ul><a href="#" class="action">Action <span>→</span></a></div>
+      <div class="project-gallery project-gallery--hero" data-gallery data-images="assets/Image_Placeholder.svg|assets/Image_Placeholder.svg|assets/Image_Placeholder.svg" data-alt="Скриншот проекта">
+        <div class="project-gallery__viewport">
+          <div class="project-gallery__track"></div>
+        </div>
+        <nav class="selector selector--hero" aria-label="Навигация по слайдам">
+          <button type="button" data-gallery-prev aria-label="Предыдущий">
+            <span class="arrow-icon arrow-icon--left" aria-hidden="true"></span>
+          </button>
+          <span class="dots" data-gallery-dots></span>
+          <button type="button" data-gallery-next aria-label="Следующий">
+            <span class="arrow-icon arrow-icon--right" aria-hidden="true"></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+    <div class="right"></div>
+    </section>
+
+    <!-- Билайн Локатор -->
+    <section class="row">
+    <div class="left"></div>
+    <div class="center frame row--line">
+      <article class="project project--170 project--hero">
+        <div class="project__info">
+          <div class="project__head">
+            <div class="project__title-wrap">
+              <h3 class="h2">Билайн Локатор</h3>
+              <a class="link-ext" href="https://locator.beeline.ru/landing#/landing" target="_blank" rel="noopener noreferrer" aria-label="Открыть проект в новой вкладке">
+                <img src="assets/24_Arrow_Up_Right.svg" alt="" width="20" height="20" />
+              </a>
+            </div>
+            <p class="mono16">2019</p>
+          </div>
+          <p class="text14 project__company">FunBox</p>
+        </div>
+        <p class="body16 project__desc">Проект «Билайн Локатор» позволяет определять местоположение вашего ребёнка или близких людей. В рамках этого продукта я руководил командой дизайнеров. Основной задачей был полный редизайн сервиса.</p>
+        <p class="body16 project__desc">Во время активной фазы разработки мы выпустили обновлённые интерфейсы, несколько языковых версий и создали дизайн-систему, которая затем легла в основу iOS- и Android-приложений.</p>
+        <p class="body16 project__desc">Мы обновили весь продукт целиком. Отдельным направлением стала адаптация сервиса для Узбекистана.</p>
+        <div class="project__bottom">
+          <ul class="tags" aria-label="Теги"><li>WEB</li><li>IOS</li><li>ANDROID</li><li>B2C</li></ul>
+        </div>
       </article>
-      <div class="placeholder"><img src="https://www.figma.com/api/mcp/asset/f67ab801-4bce-42bf-ba99-ec8a9a23e4c8" alt="Плейсхолдер" width="90" height="90" /></div>
-      <nav class="selector" aria-label="Навигация по слайдам"><button type="button">‹</button><span class="dots"><i></i><i></i><i class="active"></i></span><button type="button">›</button></nav>
-    </div><div class="right"></div></section>
 
-    <section class="row row--line"><div class="left"></div><div class="center frame">
-      <article class="project project--233">
-        <div class="project__head"><div class="project__title-wrap"><h3 class="h2">Портал управления геоданными</h3><span class="icon-up">↗</span></div><p class="mono16">2018</p></div>
-        <p class="text14">Геосервисы</p>
-        <p class="body16">Инструменты работы со слоями карт и регламентами публикации данных в организации.</p>
-        <div class="project__bottom"><ul class="tags"><li>MAPS</li><li>ADMIN</li></ul><a href="#" class="action">Action <span>→</span></a></div>
+      <div class="project-gallery project-gallery--hero" data-gallery data-images="assets/Image_Placeholder.svg|assets/Image_Placeholder.svg|assets/Image_Placeholder.svg" data-alt="Скриншот проекта">
+        <div class="project-gallery__viewport">
+          <div class="project-gallery__track"></div>
+        </div>
+        <nav class="selector selector--hero" aria-label="Навигация по слайдам">
+          <button type="button" data-gallery-prev aria-label="Предыдущий">
+            <span class="arrow-icon arrow-icon--left" aria-hidden="true"></span>
+          </button>
+          <span class="dots" data-gallery-dots></span>
+          <button type="button" data-gallery-next aria-label="Следующий">
+            <span class="arrow-icon arrow-icon--right" aria-hidden="true"></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+    <div class="right"></div>
+    </section>
+   
+    <!-- МегаФон Родительский контроль -->
+    <section class="row">
+    <div class="left"></div>
+    <div class="center frame row--line">
+      <article class="project project--170 project--hero">
+        <div class="project__info">
+          <div class="project__head">
+            <div class="project__title-wrap">
+              <h3 class="h2">МегаФон Родительский контроль</h3>
+              <a class="link-ext" href="https://moscow.megafon.ru/services/family/roditelskiy_kontrol/" target="_blank" rel="noopener noreferrer" aria-label="Открыть проект в новой вкладке">
+                <img src="assets/24_Arrow_Up_Right.svg" alt="" width="20" height="20" />
+              </a>
+            </div>
+            <p class="mono16">2019</p>
+          </div>
+          <p class="text14 project__company">FunBox</p>
+        </div>
+        <p class="body16 project__desc">Я участвовал в развитии продукта. В рамках работы мы переработали глобальное меню, интерфейсы детских профилей, функциональность «зон», а также подготовили прототип настроек для контроля приложений и сайтов на телефоне ребёнка.</p>
+        <div class="project__bottom">
+          <ul class="tags" aria-label="Теги"><li>WEB</li><li>IOS</li><li>ANDROID</li><li>B2C</li></ul>
+        </div>
       </article>
-      <div class="placeholder"><img src="https://www.figma.com/api/mcp/asset/f67ab801-4bce-42bf-ba99-ec8a9a23e4c8" alt="Плейсхолдер" width="90" height="90" /></div>
-      <nav class="selector" aria-label="Навигация по слайдам"><button type="button">‹</button><span class="dots"><i class="active"></i><i></i><i></i></span><button type="button">›</button></nav>
-    </div><div class="right"></div></section>
 
-    <section class="row row--line"><div class="left"></div><div class="center frame">
-      <article class="project project--170">
-        <div class="project__head"><div class="project__title-wrap"><h3 class="h2">NDA, внутренний продукт</h3></div><p class="mono16">2017 – 2018</p></div>
-        <p class="text14">Enterprise</p>
-        <p class="body16">Проектирование пользовательских ролей, прав и маршрутов согласования.</p>
-        <div class="project__bottom"><ul class="tags"><li>NDA</li><li>B2B</li></ul></div>
-      </article>
-      <div class="placeholder"><img src="https://www.figma.com/api/mcp/asset/f67ab801-4bce-42bf-ba99-ec8a9a23e4c8" alt="Плейсхолдер" width="90" height="90" /></div>
-      <nav class="selector" aria-label="Навигация по слайдам"><button type="button">‹</button><span class="dots"><i></i><i class="active"></i><i></i></span><button type="button">›</button></nav>
-    </div><div class="right"></div></section>
+      <div class="project-gallery project-gallery--hero" data-gallery data-images="assets/Image_Placeholder.svg|assets/Image_Placeholder.svg|assets/Image_Placeholder.svg" data-alt="Скриншот проекта">
+        <div class="project-gallery__viewport">
+          <div class="project-gallery__track"></div>
+        </div>
+        <nav class="selector selector--hero" aria-label="Навигация по слайдам">
+          <button type="button" data-gallery-prev aria-label="Предыдущий">
+            <span class="arrow-icon arrow-icon--left" aria-hidden="true"></span>
+          </button>
+          <span class="dots" data-gallery-dots></span>
+          <button type="button" data-gallery-next aria-label="Следующий">
+            <span class="arrow-icon arrow-icon--right" aria-hidden="true"></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+    <div class="right"></div>
+    </section>
 
-    <section class="row row--line"><div class="left"></div><div class="center frame">
-      <article class="project project--359">
-        <div class="project__head"><div class="project__title-wrap"><h3 class="h2">Развитие внутренней дизайн-системы</h3><span class="icon-up">↗</span></div><p class="mono16">2016 – 2019</p></div>
-        <p class="text14">Корпоративная платформа</p>
-        <p class="body16">Создание компонентов, шаблонов и правил, которые ускоряют запуск новых продуктовых сценариев.</p>
-        <p class="body16">Поддержка команд внедрения и развитие документации по паттернам проектирования.</p>
-        <div class="project__bottom"><ul class="tags"><li>DESIGN SYSTEM</li><li>COMPONENTS</li><li>GUIDELINES</li></ul><a href="#" class="action">Action <span>→</span></a></div>
-      </article>
-      <div class="placeholder"><img src="https://www.figma.com/api/mcp/asset/f67ab801-4bce-42bf-ba99-ec8a9a23e4c8" alt="Плейсхолдер" width="90" height="90" /></div>
-      <nav class="selector" aria-label="Навигация по слайдам"><button type="button">‹</button><span class="dots"><i></i><i></i><i class="active"></i></span><button type="button">›</button></nav>
-    </div><div class="right"></div></section>
+    <!-- Tele2 Геопоиск -->
+    <section class="row">
+        <div class="left"></div>
+        <div class="center frame row--line">
+          <article class="project project--170 project--hero">
+            <div class="project__info">
+              <div class="project__head">
+                <div class="project__title-wrap">
+                  <h3 class="h2">Tele2 Геопоиск</h3>
+                  <a class="link-ext" href="https://geoplus.t2.ru/landing/" target="_blank" rel="noopener noreferrer" aria-label="Открыть проект в новой вкладке">
+                    <img src="assets/24_Arrow_Up_Right.svg" alt="" width="20" height="20" />
+                  </a>
+                </div>
+                <p class="mono16">2018</p>
+              </div>
+              <p class="text14 project__company">FunBox</p>
+            </div>
+            <p class="body16 project__desc">Проект «Теле2 Геопоиск» — ещё один сервис на базе геолокации. Он позволяет отслеживать местоположение до пяти человек одновременно.</p>
+            <div class="project__bottom">
+              <ul class="tags" aria-label="Теги"><li>WEB</li><li>B2C</li></ul>
+              <a href="#" class="action">Подробнее<img src="assets/16_Arrow_Right.svg" alt="" width="16" height="16"/></a>
+            </div>
+          </article>
+    
+          <div class="project-gallery project-gallery--hero" data-gallery data-images="assets/Image_Placeholder.svg|assets/Image_Placeholder.svg|assets/Image_Placeholder.svg" data-alt="Скриншот проекта">
+            <div class="project-gallery__viewport">
+              <div class="project-gallery__track"></div>
+            </div>
+            <nav class="selector selector--hero" aria-label="Навигация по слайдам">
+              <button type="button" data-gallery-prev aria-label="Предыдущий">
+                <span class="arrow-icon arrow-icon--left" aria-hidden="true"></span>
+              </button>
+              <span class="dots" data-gallery-dots></span>
+              <button type="button" data-gallery-next aria-label="Следующий">
+                <span class="arrow-icon arrow-icon--right" aria-hidden="true"></span>
+              </button>
+            </nav>
+          </div>
+        </div>
+        <div class="right"></div>
+    </section>
 
-    <section class="row row--line"><div class="left"></div><div class="center frame">
-      <article class="project project--317">
-        <div class="project__head"><div class="project__title-wrap"><h3 class="h2">NDA, сервис для менеджмента инцидентов и поддержки</h3><span class="icon-up">↗</span></div><p class="mono16">2014 – 2016</p></div>
-        <p class="text14">Крупная технологическая компания</p>
-        <p class="body16">Проектирование панели управления, маршрутов эскалации и рабочих столов операторов поддержки.</p>
-        <div class="project__bottom"><ul class="tags"><li>NDA</li><li>SUPPORT</li><li>UX</li></ul></div>
-      </article>
-    </div><div class="right"></div></section>
+    <!-- Tele2 Родительский контроль -->
+    <section class="row">
+      <div class="left"></div>
+      <div class="center frame row--line">
+        <article class="project project--170 project--hero">
+          <div class="project__info">
+            <div class="project__head">
+              <div class="project__title-wrap">
+                <h3 class="h2">Tele2 Родительский контроль</h3>
+                <a class="link-ext" href="https://msk.t2.ru/about/news-list/2019/02/19/tele2-nastroila-roditelskij-kontrol-msk" target="_blank" rel="noopener noreferrer" aria-label="Открыть проект в новой вкладке">
+                  <img src="assets/24_Arrow_Up_Right.svg" alt="" width="20" height="20" />
+                </a>
+              </div>
+              <p class="mono16">2017</p>
+            </div>
+            <p class="text14 project__company">FunBox</p>
+          </div>
+          <p class="body16 project__desc">Это сервис для частных клиентов Tele2, позволяющий следить за местоположением близких и поддерживать семейную безопасность.</p>
+          <p class="body16 project__desc">У Tele2 не было внешней дизайн-системы, поэтому, опираясь на бренд-гайдлайны и анализируя визуальный стиль основного портала того периода, я разработал UI-библиотеку и дизайн-систему специально для этого продукта. Основной задачей было сохранить характер и визуальный язык бренда Tele2.</p>
+          <p class="body16 project__desc">Помимо веб-сервиса, разрабатывались приложения для iOS и Android. На обеих платформах предусмотрены две версии: для родителя и для ребёнка. Я создал первоначальный дизайн для родительского приложения на iOS.</p>
+          <div class="project__bottom">
+            <ul class="tags" aria-label="Теги"><li>WEB</li><li>B2C</li></ul>
+            <a href="#" class="action">Подробнее<img src="assets/16_Arrow_Right.svg" alt="" width="16" height="16"/></a>
+          </div>
+        </article>
+  
+        <div class="project-gallery project-gallery--hero" data-gallery data-images="assets/Image_Placeholder.svg|assets/Image_Placeholder.svg|assets/Image_Placeholder.svg" data-alt="Скриншот проекта">
+          <div class="project-gallery__viewport">
+            <div class="project-gallery__track"></div>
+          </div>
+          <nav class="selector selector--hero" aria-label="Навигация по слайдам">
+            <button type="button" data-gallery-prev aria-label="Предыдущий">
+              <span class="arrow-icon arrow-icon--left" aria-hidden="true"></span>
+            </button>
+            <span class="dots" data-gallery-dots></span>
+            <button type="button" data-gallery-next aria-label="Следующий">
+              <span class="arrow-icon arrow-icon--right" aria-hidden="true"></span>
+            </button>
+          </nav>
+        </div>
+      </div>
+      <div class="right"></div>
+    </section>
+   
+    <!-- Единый реестр субъектов малого и среднего предпринимательства -->
+    <section class="row row--line">
+      <div class="left"></div>
+      <div class="center frame">
+        <article class="project project--170 project--hero">
+          <div class="project__info">
+            <div class="project__head">
+              <div class="project__title-wrap">
+                <h3 class="h2">Единый реестр субъектов малого и среднего предпринимательства</h3>
+                <a class="link-ext" href="https://rmsp.nalog.ru" target="_blank" rel="noopener noreferrer" aria-label="Открыть проект в новой вкладке">
+                  <img src="assets/24_Arrow_Up_Right.svg" alt="" width="20" height="20" />
+                </a>
+              </div>
+              <p class="mono16">2016</p>
+            </div>
+            <p class="text14 project__company">Usethics</p>
+          </div>
+          <p class="body16 project__desc">Федеральная налоговая служба поставила задачу создать доступный и структурированный инструмент для поиска и анализа компаний различных категорий. В результате была разработана веб-платформа с аналитической статистикой, расширенным поиском и подробной информацией о компаниях во всех регионах России — Единый реестр субъектов малого и среднего предпринимательства.</p>
+          <p class="body16 project__desc">Дополнительно команда спроектировала концепцию Android-приложения, однако проект остался на стадии дизайна и не был реализован в продакшене.</p>
+          <div class="project__bottom">
+            <ul class="tags" aria-label="Теги"><li>WEB</li><li>B2C</li><li>B2G</li></ul>
+          </div>
+        </article>
+    </div>
+    <div class="right"></div>
+    </section>
 
+    <!-- Опыт -->
     <section class="row row--title row--line">
-      <div class="left icon-cell"><img src="https://www.figma.com/api/mcp/asset/17e53574-b076-48e6-8f71-674b0bd2c9ca" alt="Опыт" width="24" height="24" /></div>
+      <div class="left icon-cell"><img src="assets/24_Briefcase.svg" alt="Опыт" width="24" height="24" /></div>
       <div class="center title-cell"><h2 class="h1">Опыт</h2></div>
       <div class="right"></div>
     </section>
 
-    <section class="row row--line"><div class="left"></div><div class="center job-card">
-      <div class="job-head"><span class="chev">▾</span><h3 class="h2">Старший дизайнер</h3><p class="mono16">Март 2022 – Октябрь 2025</p></div>
-      <p class="text14">Ростелеком ИТ <span class="icon-up" aria-hidden="true">↗</span></p>
-      <ul class="job-list">
-        <li>Проектирование и дизайн финансовых сервисов для внутреннего бюджетирования проектов.</li>
-        <li>Участие в дизайне CRM сервисов для операторов связи.</li>
-        <li>Работа над внутренней дизайн-системой: паттерны сложных таблиц, расширение набора пиктограмм.</li>
-      </ul>
+    <section class="row row--line"><div class="left"></div><div class="center job-card" data-job-card>
+      <div class="job-head">
+        <button class="job-toggle" type="button" aria-expanded="true" aria-label="Свернуть или развернуть описание должности">
+          <img class="job-toggle__icon" src="assets/16_Chevron_Down.svg" alt="" width="16" height="16" />
+        </button>
+        <h3 class="h2">Старший дизайнер</h3>
+        <p class="mono16">Март 2022 – Октябрь 2025</p>
+      </div>
+      <p class="text14 job-company">
+        <a href="https://rtkit.ru" target="_blank" rel="noopener noreferrer">
+          Ростелеком ИТ
+          <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+        </a>
+      </p>
+      <div class="job-details">
+        <ul class="job-list">
+          <li>Проектирование и дизайн финансовых сервисов для внутреннего бюджетирования проектов.</li>
+          <li>Участие в дизайне CRM сервисов для операторов связи.</li>
+          <li>Работа над внутренней дизайн-системой: разработка паттернов проектирования для сложных таблиц, расширение набора пиктограмм.</li>
+        </ul>
+      </div>
     </div><div class="right"></div></section>
 
-    <section class="row row--line"><div class="left"></div><div class="center job-card job-card--compact">
-      <div class="job-head"><span class="chev">▸</span><h3 class="h2">Ведущий дизайнер</h3><p class="mono16">Декабрь 2021 – Февраль 2022</p></div>
-      <p class="text14">ВТБ <span class="icon-up" aria-hidden="true">↗</span></p>
+    <section class="row row--line"><div class="left"></div><div class="center job-card" data-job-card>
+      <div class="job-head">
+        <button class="job-toggle" type="button" aria-expanded="false" aria-label="Свернуть или развернуть описание должности">
+          <img class="job-toggle__icon" src="assets/16_Chevron_Down.svg" alt="" width="16" height="16" />
+        </button>
+        <h3 class="h2">Ведущий дизайнер</h3>
+        <p class="mono16">Декабрь 2021 – Февраль 2022</p>
+      </div>
+      <p class="text14 job-company">
+        <a href="https://www.vtb.ru" target="_blank" rel="noopener noreferrer">
+          ВТБ
+          <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+        </a>
+      </p>
+      <div class="job-details" hidden>
+        <ul class="job-list">
+          <li>Проектирование кабинета сотрудника фронт-офиса банка.</li>
+        </ul>
+      </div>
     </div><div class="right"></div></section>
 
-    <section class="row row--line"><div class="left"></div><div class="center job-card">
-      <div class="job-head"><span class="chev">▾</span><h3 class="h2">Старший продуктовый дизайнер</h3><p class="mono16">Март 2020 – Ноябрь 2021</p></div>
-      <p class="text14">NDA, B2B сервисы</p>
-      <ul class="job-list">
-        <li>Развитие ключевых пользовательских сценариев для web-платформы.</li>
-        <li>Внедрение UX-метрик и дизайн-ревью в процесс продуктовой разработки.</li>
-      </ul>
-    </div><div class="right"></div></section>
-
-    <section class="row row--line"><div class="left"></div><div class="center job-card">
-      <div class="job-head"><span class="chev">▾</span><h3 class="h2">Продуктовый дизайнер</h3><p class="mono16">Сентябрь 2018 – Февраль 2020</p></div>
-      <p class="text14">Enterprise проекты</p>
-      <ul class="job-list">
-        <li>Проектирование интерфейсов кабинетов операторов и администраторов.</li>
-        <li>Разработка библиотек компонентов и шаблонов для повторного использования.</li>
-      </ul>
-    </div><div class="right"></div></section>
-
-    <section class="row row--line"><div class="left"></div><div class="center job-card">
-      <div class="job-head"><span class="chev">▾</span><h3 class="h2">UI/UX дизайнер</h3><p class="mono16">Июль 2016 – Август 2018</p></div>
-      <p class="text14">Digital агентство</p>
-      <ul class="job-list">
-        <li>Разработка концептов и прототипов клиентских сервисов в B2B и B2C.</li>
-        <li>Проведение презентаций решений и защита дизайн-концепций.</li>
-      </ul>
+    <section class="row row--line"><div class="left"></div><div class="center job-card" data-job-card>
+      <div class="job-head">
+        <button class="job-toggle" type="button" aria-expanded="true" aria-label="Свернуть или развернуть описание должности">
+          <img class="job-toggle__icon" src="assets/16_Chevron_Down.svg" alt="" width="16" height="16" />
+        </button>
+        <h3 class="h2">Дизайнер → Ведущий дизайнер</h3>
+        <p class="mono16">Август 2017 – Сентябрь 2021</p>
+      </div>
+      <p class="text14 job-company">
+        <a href="https://funbox.ru" target="_blank" rel="noopener noreferrer">
+          FunBox
+          <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+        </a>
+      </p>
+      <div class="job-details">
+        <p class="body16 job-paragraph">Работа в команде геосервисов, которая разрабатывала продукты для сотовых операторов. Ключевые проекты, в которых принимал участие:</p>
+        <ul class="job-list job-list--links">
+          <li>
+            <a href="https://msk.t2.ru/about/news-list/2019/02/19/tele2-nastroila-roditelskij-kontrol-msk" target="_blank" rel="noopener noreferrer">
+              Tele2 «Родительский контроль»
+              <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+            </a>
+          </li>
+          <li>
+            <a href="https://kk.megafon.ru/new/landing" target="_blank" rel="noopener noreferrer">
+              МегаФон «Контроль Кадров»
+              <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div><div class="right"></div></section>
   </main>
   <script src="script.js"></script>
