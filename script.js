@@ -176,7 +176,18 @@
       img.width = 720;
       img.height = 405;
 
-      slide.appendChild(img);
+      if (isPlaceholder) {
+        slide.appendChild(img);
+      } else {
+        const link = document.createElement("a");
+        link.className = "project-gallery__link";
+        link.href = src;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.setAttribute("aria-label", `${alt} ${index + 1}: открыть в новой вкладке`);
+        link.appendChild(img);
+        slide.appendChild(link);
+      }
       track.appendChild(slide);
 
       const dot = document.createElement("i");

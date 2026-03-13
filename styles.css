@@ -205,6 +205,49 @@ a:focus-visible {
   text-decoration: none;
 }
 
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-link--up-right-20 {
+  width: 20px;
+  height: 20px;
+  background-image: url("assets/24_Arrow_Up_Right.svg");
+}
+
+.icon-link--up-right-16 {
+  width: 16px;
+  height: 16px;
+  background-image: url("assets/16_Arrow_Up_Right.svg");
+}
+
+.icon-link--right-16 {
+  width: 16px;
+  height: 16px;
+  background-image: url("assets/16_Arrow_Right.svg");
+}
+
+a:hover .icon-link--up-right-20,
+a:focus-visible .icon-link--up-right-20 {
+  background-image: url("assets/24_Arrow_Up_Right_Accent.svg");
+}
+
+a:hover .icon-link--up-right-16,
+a:focus-visible .icon-link--up-right-16 {
+  background-image: url("assets/16_Arrow_Up_Right_Accent.svg");
+}
+
+a:hover .icon-link--right-16,
+a:focus-visible .icon-link--right-16 {
+  background-image: url("assets/16_Arrow_Right_Accent.svg");
+}
+
 .icon-up {
   color: var(--black-90);
   font-size: 16px;
@@ -381,6 +424,12 @@ a:focus-visible {
   height: 100%;
 }
 
+.project-gallery__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .project-gallery__slide img {
   width: 100%;
   height: 100%;
@@ -521,12 +570,13 @@ a:focus-visible {
   content: "•";
   position: absolute;
   left: -14px;
-  top: 0;
+  top: 10px;
+  transform: translateY(-50%);
   line-height: 1;
 }
 
 .job-list li + li {
-  margin-top: 4px;
+  margin-top: 0;
 }
 
 .job-list--links li + li {
