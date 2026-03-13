@@ -10,7 +10,7 @@
   <main class="layout" aria-label="Портфолио">
     
     <!-- О себе -->
-    <section class="row row--about row--line">
+    <section id="about" class="row row--about row--line">
       <div class="left icon-cell">
         <img src="assets/24_Fire_Camp.svg" alt="О себе" width="24" height="24" />
       </div>
@@ -26,7 +26,7 @@
     </section>
     
     <!-- Проекты -->
-    <section class="row row--title row--line">
+    <section id="projects" class="row row--title row--line">
       <div class="left icon-cell">
         <img src="assets/24_Folder_Open.svg" alt="Проекты" width="24" height="24" />
       </div>
@@ -465,13 +465,16 @@
     </section>
 
     <!-- Опыт -->
-    <section class="row row--title row--line">
+    <section id="experience" class="row row--title row--line">
       <div class="left icon-cell"><img src="assets/24_Briefcase.svg" alt="Опыт" width="24" height="24" /></div>
       <div class="center title-cell"><h2 class="h1">Опыт</h2></div>
       <div class="right"></div>
     </section>
 
-    <section class="row row--line"><div class="left"></div><div class="center job-card" data-job-card>
+    <!-- Ростелеком ИТ -->
+    <section class="row">
+      <div class="left"></div>
+      <div class="center row--line job-card" data-job-card>
       <div class="job-head">
         <button class="job-toggle" type="button" aria-expanded="true" aria-label="Свернуть или развернуть описание должности">
           <img class="job-toggle__icon" src="assets/16_Chevron_Down.svg" alt="" width="16" height="16" />
@@ -492,62 +495,190 @@
           <li>Работа над внутренней дизайн-системой: разработка паттернов проектирования для сложных таблиц, расширение набора пиктограмм.</li>
         </ul>
       </div>
-    </div><div class="right"></div></section>
+      </div>
+      <div class="right"></div>
+    </section>
 
-    <section class="row row--line"><div class="left"></div><div class="center job-card" data-job-card>
-      <div class="job-head">
+    <!-- UsabilityLab -->
+    <section class="row">
+      <div class="left"></div>
+      <div class="center row--line job-card" data-job-card>
+        <div class="job-head">
         <button class="job-toggle" type="button" aria-expanded="false" aria-label="Свернуть или развернуть описание должности">
           <img class="job-toggle__icon" src="assets/16_Chevron_Down.svg" alt="" width="16" height="16" />
         </button>
         <h3 class="h2">Ведущий дизайнер</h3>
         <p class="mono16">Декабрь 2021 – Февраль 2022</p>
+        </div>
+        <p class="text14 job-company">
+          <a href="https://usabilitylab.ru" target="_blank" rel="noopener noreferrer">
+            Юзабилитилаб
+            <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+          </a>
+        </p>
+        <div class="job-details">
+          <ul class="job-list">
+            <li>Проектирование кабинета сотрудника фронт-офиса банка.</li>
+            <li>Проведение исследований и интервью с сотрудниками банка.</li>
+          </ul>
+        </div>
       </div>
-      <p class="text14 job-company">
-        <a href="https://www.vtb.ru" target="_blank" rel="noopener noreferrer">
-          ВТБ
-          <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
-        </a>
-      </p>
-      <div class="job-details" hidden>
-        <ul class="job-list">
-          <li>Проектирование кабинета сотрудника фронт-офиса банка.</li>
-        </ul>
-      </div>
-    </div><div class="right"></div></section>
+      <div class="right"></div>
+    </section>
 
-    <section class="row row--line"><div class="left"></div><div class="center job-card" data-job-card>
-      <div class="job-head">
-        <button class="job-toggle" type="button" aria-expanded="true" aria-label="Свернуть или развернуть описание должности">
-          <img class="job-toggle__icon" src="assets/16_Chevron_Down.svg" alt="" width="16" height="16" />
-        </button>
-        <h3 class="h2">Дизайнер → Ведущий дизайнер</h3>
-        <p class="mono16">Август 2017 – Сентябрь 2021</p>
+    <!-- FunBox -->    
+    <section class="row">
+      <div class="left"></div>
+      <div class="center job-card row--line" data-job-card>
+        <div class="job-head">
+          <button class="job-toggle" type="button" aria-expanded="true" aria-label="Свернуть или развернуть описание должности">
+            <img class="job-toggle__icon" src="assets/16_Chevron_Down.svg" alt="" width="16" height="16" />
+          </button>
+          <h3 class="h2">Дизайнер → Ведущий дизайнер</h3>
+          <p class="mono16">Август 2017 – Сентябрь 2021</p>
+        </div>
+        <p class="text14 job-company">
+          <a href="https://funbox.ru" target="_blank" rel="noopener noreferrer">
+            FunBox
+            <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+          </a>
+        </p>
+        <div class="job-details">
+          <p class="body16 job-paragraph">Работа в команде геосервисов, которая разрабатывала продукты для сотовых операторов. Ключевые проекты, в которых принимал участие:</p>
+          <ul class="job-list job-list--links">
+            <li>
+              <a href="https://msk.t2.ru/about/news-list/2019/02/19/tele2-nastroila-roditelskij-kontrol-msk" target="_blank" rel="noopener noreferrer">
+                Tele2 «Родительский контроль»
+                <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+              </a>
+            </li>
+            <li>
+              <a href="https://kk.megafon.ru/new/landing" target="_blank" rel="noopener noreferrer">
+                МегаФон «Контроль Кадров»
+                <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <p class="text14 job-company">
-        <a href="https://funbox.ru" target="_blank" rel="noopener noreferrer">
-          FunBox
-          <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
-        </a>
-      </p>
-      <div class="job-details">
-        <p class="body16 job-paragraph">Работа в команде геосервисов, которая разрабатывала продукты для сотовых операторов. Ключевые проекты, в которых принимал участие:</p>
-        <ul class="job-list job-list--links">
-          <li>
-            <a href="https://msk.t2.ru/about/news-list/2019/02/19/tele2-nastroila-roditelskij-kontrol-msk" target="_blank" rel="noopener noreferrer">
-              Tele2 «Родительский контроль»
+      <div class="right"></div>
+    </section>
+
+    <!-- Freelance -->    
+    <section class="row">
+      <div class="left"></div>
+      <div class="center job-card row--line" data-job-card>
+        <div class="job-head">
+          <button class="job-toggle" type="button" aria-expanded="true" aria-label="Свернуть или развернуть описание должности">
+            <img class="job-toggle__icon" src="assets/16_Chevron_Down.svg" alt="" width="16" height="16" />
+          </button>
+          <h3 class="h2">Дизайнер</h3>
+          <p class="mono16">Июль 2016 – Июнь 2017</p>
+        </div>
+        <p class="text14 job-company">
+          Фриланс
+        </p>
+        <div class="job-details">
+          <p class="body16 job-paragraph">Работа с малым бизнесом: готовил интерактивные прототипы, макеты для разработки, сайты на Tilda.</p>          
+        </div>
+      </div>
+      <div class="right"></div>
+    </section>
+
+    <!-- Usethics -->    
+    <section class="row row--line">
+      <div class="left"></div>
+      <div class="center job-card" data-job-card>
+        <div class="job-head">
+          <button class="job-toggle" type="button" aria-expanded="true" aria-label="Свернуть или развернуть описание должности">
+            <img class="job-toggle__icon" src="assets/16_Chevron_Down.svg" alt="" width="16" height="16" />
+          </button>
+          <h3 class="h2">Дизайнер интерфейсов</h3>
+          <p class="mono16">Октябрь 2015 – Июнь 2016</p>
+        </div>
+        <p class="text14 job-company">
+          <a href="https://usethics.ru" target="_blank" rel="noopener noreferrer">
+            FunBox
+            <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+          </a>
+        </p>
+        <div class="job-details">
+          <p class="body16 job-paragraph">Проектировал веб и мобильные приложения, выстраивал пользовательские сценарии и интерфейсы. Участвовал в проектах для МегаФон, ФНС, Сбербанк, X5 Retail — от клиентских сервисов до внутренних B2B-решений.</p>
+          <p class="body16 job-paragraph">Ключевые проекты:</p>
+          <ul class="job-list job-list--links">
+            <li>
+              <a href="https://rmsp.nalog.ru" target="_blank" rel="noopener noreferrer">
+                Единый реестр субъектов МСП
+                <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+              </a>
+            </li>
+            <li>
+              <a href="https://youtu.be/lAduhfjoHC4?t=20703" target="_blank" rel="noopener noreferrer">
+                X5 Group iOS для отбора локаций под магазины (демо на YaC 2017)
+                <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+              </a>
+            </li>
+            <li>
+              <a href="https://moscow.megafon.ru/tariffs/all/" target="_blank" rel="noopener noreferrer">
+                UX-исследования и редизайн тарифных страниц
+                <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
+              </a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+      <div class="right"></div>
+    </section>   
+    
+    <!-- Контакты -->
+    <section id="contacts" class="row row--title row--line">
+      <div class="left icon-cell"><img src="assets/24_Phone.svg" alt="Опыт" width="24" height="24" /></div>
+      <div class="center title-cell"><h2 class="h1">Контакты</h2></div>
+      <div class="right"></div>
+    </section>
+
+    <section class="row row--line">
+      <div class="left"></div>
+      <div class="center contacts-card">
+        <div class="contacts-bar">
+          <div class="contacts-links" role="list" aria-label="Контакты">
+            <a class="contact-link" role="listitem" href="https://www.linkedin.com/in/nikita-frolov/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <span>LinkedIn</span>
               <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
             </a>
-          </li>
-          <li>
-            <a href="https://kk.megafon.ru/new/landing" target="_blank" rel="noopener noreferrer">
-              МегаФон «Контроль Кадров»
+            <a class="contact-link" role="listitem" href="https://t.me/nekita_frolov/" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+              <span>Telegram</span>
               <img src="assets/16_Arrow_Up_Right.svg" alt="" width="16" height="16" />
             </a>
-          </li>
-        </ul>
+            <button class="contact-link contact-link--copy" role="listitem" type="button" data-copy-email="n.s.frolov@gmail.com" aria-label="Скопировать E-Mail">
+              <span>E-Mail</span>
+              <img src="assets/16_Copy.svg" alt="" width="16" height="16" />
+            </button>
+          </div>
+          <p class="contacts-note">Задизайнено и свёрстано мной @ 2025</p>
+        </div>
       </div>
-    </div><div class="right"></div></section>
+      <div class="right"></div>
+    </section>
   </main>
+  <nav class="menu" aria-label="Навигация по разделам">
+    <div class="menu__row">
+      <div class="menu__side menu__side--left"></div>
+      <div class="menu__center">
+        <div class="menu__group">
+          <button class="menu__link menu__btn--active" type="button" data-scroll="#about">О СЕБЕ</button>
+          <button class="menu__link" type="button" data-scroll="#projects">ПРОЕКТЫ</button>
+          <button class="menu__link" type="button" data-scroll="#experience">ОПЫТ</button>
+          <button class="menu__link" type="button" data-scroll="#contacts">КОНТАКТЫ</button>
+        </div>
+        <div class="menu__group">
+          <button class="menu__link" type="button" aria-current="page">RU</button>
+          <button class="menu__link menu__link--disabled" type="button" aria-disabled="true">EN</button>
+        </div>
+      </div>
+      <div class="menu__side menu__side--right"></div>
+    </div>
+  </nav>
   <script src="script.js"></script>
 </body>
 </html>

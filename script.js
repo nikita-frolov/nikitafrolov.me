@@ -1,6 +1,6 @@
 /* Anchor nav + scroll-spy + mobile overlay + experience collapse */
 (function () {
-  const buttons = Array.from(document.querySelectorAll("[data-scroll]"));
+  const buttons = Array.from(document.querySelectorAll(".menu [data-scroll]"));
   const sections = Array.from(document.querySelectorAll("main section[id]"));
   const overlay = document.querySelector("[data-overlay]");
   const burger = document.querySelector("[data-burger]");
@@ -17,11 +17,12 @@
   function scrollToId(id) {
     const el = document.querySelector(id);
     if (!el) return;
-    const y = window.scrollY + el.getBoundingClientRect().top - 12;
+    const y = window.scrollY + el.getBoundingClientRect().top - 20;
     window.scrollTo({ top: y, behavior: "smooth" });
   }
 
   document.addEventListener("click", (e) => {
+    if (!(e.target instanceof Element)) return;
     const btn = e.target.closest("[data-scroll]");
     if (!btn) return;
     e.preventDefault();
@@ -35,7 +36,7 @@
   });
 
   function onScroll() {
-    const y = window.scrollY + 120;
+    const y = window.scrollY + 20;
     let current = "#" + (sections[0]?.id || "");
     for (const s of sections) {
       if (s.offsetTop <= y) current = "#" + s.id;
@@ -115,11 +116,26 @@
 
     const open = button.getAttribute("aria-expanded") === "true";
     details.hidden = !open;
+  });
 
-    button.addEventListener("click", () => {
-      const isOpen = button.getAttribute("aria-expanded") === "true";
-      setJobCard(card, !isOpen);
-    });
+  document.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) return;
+    const button = event.target.closest(".job-toggle");
+    const head = event.target.closest(".job-head");
+
+    let card = null;
+    if (button) {
+      card = button.closest("[data-job-card]");
+    } else if (head && !event.target.closest("a")) {
+      card = head.closest("[data-job-card]");
+    }
+    if (!card) return;
+
+    const toggle = card.querySelector(".job-toggle");
+    if (!toggle) return;
+
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    setJobCard(card, !isOpen);
   });
 })();
 
@@ -202,5 +218,52 @@
     });
 
     render();
+  });
+})();
+
+(function () {
+  const copyButtons = Array.from(document.querySelectorAll("[data-copy-email]"));
+  if (copyButtons.length === 0) return;
+
+  function copyWithFallback(text) {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "absolute";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+  }
+
+  async function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+    copyWithFallback(text);
+  }
+
+  copyButtons.forEach((button) => {
+    const originalLabel = button.querySelector("span")?.textContent || "E-Mail";
+    button.addEventListener("click", async () => {
+      const email = button.getAttribute("data-copy-email");
+      if (!email) return;
+
+      try {
+        await copyText(email);
+        const labelNode = button.querySelector("span");
+        if (labelNode) labelNode.textContent = "Скопировано";
+      } catch (error) {
+        const labelNode = button.querySelector("span");
+        if (labelNode) labelNode.textContent = "Ошибка";
+      }
+
+      window.setTimeout(() => {
+        const labelNode = button.querySelector("span");
+        if (labelNode) labelNode.textContent = originalLabel;
+      }, 1200);
+    });
   });
 })();
