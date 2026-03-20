@@ -36,6 +36,14 @@ a:focus-visible {
   padding-bottom: 34px;
 }
 
+.layout--case {
+  padding-bottom: 34px;
+}
+
+.layout--case .row {
+  grid-template-columns: 180px 1080px minmax(0, 1fr);
+}
+
 .row {
   display: grid;
   grid-template-columns: 180px 720px minmax(0, 1fr);
@@ -230,6 +238,12 @@ a:focus-visible {
   background-image: url("assets/24_Arrow_Up_Right.svg");
 }
 
+.icon-link--up-right-20-case {
+  width: 20px;
+  height: 20px;
+  background-image: url("assets/20_Arrow_Up_Right.svg");
+}
+
 .icon-link--up-right-16 {
   width: 16px;
   height: 16px;
@@ -245,6 +259,11 @@ a:focus-visible {
 a:hover .icon-link--up-right-20,
 a:focus-visible .icon-link--up-right-20 {
   background-image: url("assets/24_Arrow_Up_Right_Accent.svg");
+}
+
+a:hover .icon-link--up-right-20-case,
+a:focus-visible .icon-link--up-right-20-case {
+  background-image: url("assets/20_Arrow_Up_Right_Accent.svg");
 }
 
 a:hover .icon-link--up-right-16,
@@ -405,6 +424,12 @@ a:focus-visible .icon-link--right-16 {
   mask: url("assets/16_Chevron_Right.svg") center / contain no-repeat;
 }
 
+.arrow-icon--back-left {
+  background-image: url("assets/16_Arrow_Left.svg");
+  -webkit-mask: url("assets/16_Arrow_Left.svg") center / contain no-repeat;
+  mask: url("assets/16_Arrow_Left.svg") center / contain no-repeat;
+}
+
 .project-gallery {
   display: flex;
   flex-direction: column;
@@ -479,6 +504,60 @@ a:focus-visible .icon-link--right-16 {
   width: 10px;
   height: 10px;
   background: url("assets/Current.svg") center / 10px 10px no-repeat;
+}
+
+.case-project {
+  min-height: 74px;
+  gap: 0;
+}
+
+.case-project .project__info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.case-project__company a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.case-project__company a:hover,
+.case-project__company a:focus-visible {
+  color: var(--accent-100);
+}
+
+.case-copy {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.case-copy .body16 {
+  max-width: 688px;
+  line-height: 1.25;
+}
+
+.case-gallery .project-gallery__viewport {
+  aspect-ratio: 16 / 9;
+  background: var(--bg);
+}
+
+.menu__center--case .menu__group:first-child .menu__link {
+  border-right: 1px solid var(--black-90);
+}
+
+.menu--case .menu__row {
+  grid-template-columns: 180px 1080px minmax(0, 1fr);
+}
+
+.menu__link--back {
+  text-decoration: none;
+  gap: 4px;
 }
 
 .dots {
@@ -754,6 +833,11 @@ a:focus-visible .icon-link--right-16 {
     grid-template-columns: 80px minmax(0, 1fr);
   }
 
+  .layout--case .row,
+  .menu--case .menu__row {
+    grid-template-columns: 80px minmax(0, 1fr);
+  }
+
   .right {
     display: none;
   }
@@ -842,5 +926,9 @@ a:focus-visible .icon-link--right-16 {
   .placeholder {
     height: auto;
     aspect-ratio: 16 / 9;
+  }
+
+  .menu__center--case {
+    justify-content: space-between;
   }
 }
