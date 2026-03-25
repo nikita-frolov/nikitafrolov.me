@@ -145,6 +145,7 @@
 
   galleries.forEach((gallery) => {
     const track = gallery.querySelector(".project-gallery__track");
+    const viewport = gallery.querySelector(".project-gallery__viewport");
     const dotsWrap = gallery.querySelector("[data-gallery-dots]");
     const prevBtn = gallery.querySelector("[data-gallery-prev]");
     const nextBtn = gallery.querySelector("[data-gallery-next]");
@@ -199,11 +200,31 @@
     const dots = Array.from(dotsWrap.querySelectorAll("i"));
     let currentIndex = 0;
 
+    function updateAspectRatio(index) {
+      if (!viewport) return;
+      const slide = track.children[index];
+      if (!(slide instanceof Element)) return;
+      const img = slide.querySelector("img");
+      if (!(img instanceof HTMLImageElement)) return;
+
+      const applyRatio = () => {
+        if (img.naturalWidth <= 0 || img.naturalHeight <= 0) return;
+        gallery.style.setProperty("--gallery-aspect-ratio", `${img.naturalWidth} / ${img.naturalHeight}`);
+      };
+
+      if (img.complete) {
+        applyRatio();
+      } else {
+        img.addEventListener("load", applyRatio, { once: true });
+      }
+    }
+
     function render() {
       track.style.transform = `translateX(${-currentIndex * 100}%)`;
       dots.forEach((dot, i) => {
         dot.classList.toggle("active", i === currentIndex);
       });
+      updateAspectRatio(currentIndex);
     }
 
     if (prevBtn) {
