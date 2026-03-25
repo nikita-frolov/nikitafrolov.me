@@ -171,34 +171,6 @@ a:focus-visible {
   gap: 4px;
 }
 
-.project--149 {
-  min-height: 149px;
-}
-
-.project--170 {
-  min-height: 170px;
-}
-
-.project--212 {
-  min-height: 212px;
-}
-
-.project--233 {
-  min-height: 233px;
-}
-
-.project--317 {
-  min-height: 317px;
-}
-
-.project--338 {
-  min-height: 338px;
-}
-
-.project--359 {
-  min-height: 359px;
-}
-
 .project__head {
   display: flex;
   justify-content: space-between;
@@ -556,6 +528,15 @@ a:focus-visible .icon-link--right-16 {
 .case-copy .body16 {
   max-width: 688px;
   line-height: 1.25;
+}
+
+.case-copy__list {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.case-copy__list li + li {
+  margin-top: 2px;
 }
 
 .case-gallery .project-gallery__viewport {
