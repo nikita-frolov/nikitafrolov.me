@@ -78,9 +78,20 @@ a:focus-visible {
   min-height: 58px;
 }
 
-.about,
-.title-cell {
+.about {
   padding: 16px;
+}
+
+.title-cell {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.row--title .icon-cell {
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .h1 {
@@ -870,11 +881,14 @@ a:focus-visible .icon-link--right-16 {
   }
 
   .about,
-  .title-cell,
   .project,
   .job-card,
   .contacts-card {
     padding: 12px;
+  }
+
+  .title-cell {
+    padding: 0 12px;
   }
 
   .contacts-bar {
