@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Viewport Size Tool</title>
+  <meta name="description" content="A live browser viewport size tool that reports CSS pixels, visual viewport size, screen size, DPR, and orientation." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="viewport.css" />
+</head>
+<body>
+  <main class="viewport-tool" aria-labelledby="tool-title">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Live browser measurement</p>
+        <h1 id="tool-title">Viewport Size Tool</h1>
+      </div>
+      <a class="home-link" href="index.html">Portfolio</a>
+    </section>
+
+    <section class="readout" aria-live="polite">
+      <div class="readout__value">
+        <span data-metric="innerWidth">0</span>
+        <span class="readout__separator">x</span>
+        <span data-metric="innerHeight">0</span>
+      </div>
+      <p class="readout__label">Layout viewport, CSS pixels</p>
+    </section>
+
+    <section class="metrics" aria-label="Viewport details">
+      <article class="metric">
+        <p class="metric__label">Visual viewport</p>
+        <p class="metric__value"><span data-metric="visualWidth">0</span> x <span data-metric="visualHeight">0</span></p>
+      </article>
+      <article class="metric">
+        <p class="metric__label">Screen</p>
+        <p class="metric__value"><span data-metric="screenWidth">0</span> x <span data-metric="screenHeight">0</span></p>
+      </article>
+      <article class="metric">
+        <p class="metric__label">Device pixel ratio</p>
+        <p class="metric__value" data-metric="dpr">0</p>
+      </article>
+      <article class="metric">
+        <p class="metric__label">Orientation</p>
+        <p class="metric__value" data-metric="orientation">Unknown</p>
+      </article>
+    </section>
+
+    <section class="controls" aria-label="Actions">
+      <button class="button" type="button" data-copy-size>Copy size</button>
+      <p class="status" data-copy-status role="status"></p>
+    </section>
+  </main>
+
+  <script src="viewport.js"></script>
+</body>
+</html>
