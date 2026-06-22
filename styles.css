@@ -862,7 +862,7 @@ a:focus-visible .icon-link--right-16 {
   }
 
   .layout--case .row,
-  .menu--case .menu__row {
+  .menu__row {
     grid-template-columns: 1fr;
   }
 
@@ -878,6 +878,15 @@ a:focus-visible .icon-link--right-16 {
   .center {
     border-left: 0;
     border-right: 0;
+  }
+
+  .menu__center {
+    border-left: 0;
+  }
+
+  .menu__link {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
   .about,
