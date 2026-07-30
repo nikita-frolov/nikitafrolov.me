@@ -157,6 +157,7 @@
       .map((item) => item.trim())
       .filter(Boolean);
     const alt = gallery.getAttribute("data-alt") || "Gallery image";
+    const originalAlt = gallery.getAttribute("data-i18n-data-alt") || alt;
     if (images.length === 0) return;
 
     track.innerHTML = "";
@@ -173,6 +174,7 @@
       const img = document.createElement("img");
       img.src = src;
       img.alt = alt + " " + (index + 1);
+      img.setAttribute("data-i18n-alt", originalAlt + " " + (index + 1));
       img.loading = index === 0 ? "eager" : "lazy";
       img.width = 720;
       img.height = 405;
@@ -185,7 +187,8 @@
         link.href = src;
         link.target = "_blank";
         link.rel = "noopener noreferrer";
-        link.setAttribute("aria-label", `${alt} ${index + 1}: открыть в новой вкладке`);
+        link.setAttribute("aria-label", `${alt} ${index + 1}: ${window.t ? window.t("открыть в новой вкладке") : "открыть в новой вкладке"}`);
+        link.setAttribute("data-i18n-aria-label", `${originalAlt} ${index + 1}: открыть в новой вкладке`);
         link.appendChild(img);
         slide.appendChild(link);
       }
@@ -304,10 +307,10 @@
       try {
         await copyText(email);
         const labelNode = button.querySelector("span");
-        if (labelNode) labelNode.textContent = "Скопировано";
+        if (labelNode) labelNode.textContent = window.t ? window.t("Скопировано") : "Скопировано";
       } catch (error) {
         const labelNode = button.querySelector("span");
-        if (labelNode) labelNode.textContent = "Ошибка";
+        if (labelNode) labelNode.textContent = window.t ? window.t("Ошибка") : "Ошибка";
       }
 
       window.setTimeout(() => {

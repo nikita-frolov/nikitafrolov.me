@@ -797,6 +797,7 @@ a:focus-visible .icon-link--right-16 {
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.02em;
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -814,6 +815,14 @@ a:focus-visible .icon-link--right-16 {
 .menu__btn--active:focus-visible {
   background: var(--black-90);
   color: var(--black-2);
+}
+
+.menu__link--active-language,
+.menu__link--active-language:hover,
+.menu__link--active-language:focus-visible {
+  background: var(--black-90);
+  color: var(--black-2);
+  cursor: default;
 }
 
 .menu__link--disabled,
